@@ -11,7 +11,7 @@ app.post('/problem', express.json(), (req, res) => {
     try{
     const id = req.body.problemId;
     const input = req.body.input;
-    const result = global["problem_"+id](input);
+    const result = global[`problem_${id}`](input);
     console.log(result);
     res.send(result);
     }
