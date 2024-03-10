@@ -23,4 +23,13 @@ app.get('/', express.json(), (req, res) => {
     res.send("Hello Nayak!");
 });
 
+app.get('/health', express.json(), (req, res) => {
+    res.send("api working");
+});
+
+app.post('/health', express.json(), (req, res) => {
+    const id = req.body.id;
+    res.send("your id is"+id);
+});
+
 app.listen(process.env.PORT || 3000)
