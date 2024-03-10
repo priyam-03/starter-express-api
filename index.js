@@ -1,5 +1,7 @@
 const express = require('express')
 const app = express()
+const cors = require("cors");
+app.use(cors());
 // app.all('/', (req, res) => {
 //     console.log("Just got a request!")
 //     res.send('I am Priyam Saha')
